@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="40dp"
+    android:viewportWidth="296"
+    android:viewportHeight="40">
+
+    <!-- shift everything 10 units to the right to add side-padding -->
+    <group
+        android:translateX="10"
+        android:translateY="0">
+
+        <!-- B -->
+        <path
+            android:fillColor="#2D7A8B"
+            android:pathData="M4,4 L4,36 L12,36 C15.313,36 18,33.313 18,30 C18,26.687 15.313,24 12,24 L4,24 Z
+                              M4,24 L12,24 C15.313,24 18,21.313 18,18 C18,14.687 15.313,12 12,12 L4,12 Z
+                              M4,12 L12,12 C15.313,12 18,9.313 18,6 C18,2.687 15.313,0 12,0 L4,0 Z" />
+
+        <!-- A -->
+        <path
+            android:fillColor="#2D7A8B"
+            android:pathData="M28,36 L36,0 L44,36 L38,36 L36,12 L34,36 Z" />
+
+        <!-- N -->
+        <path
+            android:fillColor="#2D7A8B"
+            android:pathData="M52,36 L52,0 L58,0 L78,28 L78,0 L84,0 L84,36 L78,36 L58,8 L58,36 Z" />
+
+        <!-- K -->
+        <path
+            android:fillColor="#2D7A8B"
+            android:pathData="M92,36 L92,0 L98,0 L98,16 L114,0 L122,0 L106,18 L122,36 L114,36 L98,20 L98,36 Z" />
+
+        <!-- (space: implicit 10 units) -->
+
+        <!-- B -->
+        <path
+            android:fillColor="#2D7A8B"
+            android:pathData="M132,4 L132,36 L140,36 C143.313,36 146,33.313 146,30 C146,26.687 143.313,24 140,24 L132,24 Z
+                              M132,24 L140,24 C143.313,24 146,21.313 146,18 C146,14.687 143.313,12 140,12 L132,12 Z
+                              M132,12 L140,12 C143.313,12 146,9.313 146,6 C146,2.687 143.313,0 140,0 L132,0 Z" />
+
+        <!-- U -->
+        <path
+            android:fillColor="#2D7A8B"
+            android:pathData="M154,0 L160,0 L160,28 C160,31.313 157.313,34 154,34 C150.687,34 148,31.313 148,28 L148,0 Z" />
+
+        <!-- D -->
+        <path
+            android:fillColor="#2D7A8B"
+            android:pathData="M168,0 L168,36 L178,36 C183.523,36 188,31.523 188,26 L188,10 C188,4.477 183.523,0 178,0 Z" />
+
+        <!-- D -->
+        <path
+            android:fillColor="#2D7A8B"
+            android:pathData="M198,0 L198,36 L208,36 C213.523,36 218,31.523 218,26 L218,10 C218,4.477 213.523,0 208,0 Z" />
+
+        <!-- I -->
+        <path
+            android:fillColor="#2D7A8B"
+            android:pathData="M228,0 L228,36 L234,36 L234,0 Z" />
+
+        <!-- E -->
+        <path
+            android:fillColor="#2D7A8B"
+            android:pathData="M246,0 L246,36 L276,36 L276,30 L252,30 L252,20 L272,20 L272,14 L252,14 L252,6 L276,6 L276,0 Z" />
+
+    </group>
+</vector>

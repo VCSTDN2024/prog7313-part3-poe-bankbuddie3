@@ -1,0 +1,49 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Circle background -->
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M100,100 m-80,0 a80,80 0 1,0 160,0 a80,80 0 1,0 -160,0" />
+
+    <!-- Hand -->
+    <path
+        android:fillColor="#F5D0A9"
+        android:pathData="M60,140 C60,140 70,160 100,160 C130,160 140,140 140,140 L140,150 C140,150 130,170 100,170 C70,170 60,150 60,150 Z" />
+
+    <!-- Palm -->
+    <path
+        android:fillColor="#F5D0A9"
+        android:pathData="M60,140 C60,120 70,100 100,100 C130,100 140,120 140,140 C140,160 130,180 100,180 C70,180 60,160 60,140 Z" />
+
+    <!-- Sleeve -->
+    <path
+        android:fillColor="#A9D0F5"
+        android:pathData="M60,140 L50,130 L50,150 L60,160 Z" />
+
+    <!-- Phone -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M90,70 L130,70 L130,130 L90,130 Z" />
+
+    <!-- Phone Screen -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M95,75 L125,75 L125,120 L95,120 Z" />
+
+    <!-- App UI Elements -->
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M100,85 L120,85 L120,90 L100,90 Z" />
+
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M100,95 L120,95 L120,100 L100,100 Z" />
+
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M100,105 L110,105 L110,110 L100,110 Z" />
+</vector>

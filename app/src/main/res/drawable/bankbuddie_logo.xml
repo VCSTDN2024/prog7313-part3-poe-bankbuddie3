@@ -1,0 +1,53 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="40dp"
+    android:viewportWidth="200"
+    android:viewportHeight="40">
+
+    <!-- Bank -->
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M10,8 L10,32 L20,32 C25,32 30,28 30,20 C30,12 25,8 20,8 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M15,13 L15,27 L20,27 C22.5,27 25,24 25,20 C25,16 22.5,13 20,13 Z" />
+
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M35,8 L35,32 L40,32 L40,23 L45,32 L50,32 L45,23 C47.5,23 50,20 50,16 C50,12 47.5,8 42.5,8 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,13 L40,18 L42.5,18 C43.5,18 45,17 45,15.5 C45,14 43.5,13 42.5,13 Z" />
+
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M55,8 L55,32 L75,32 L75,27 L60,27 L60,22 L70,22 L70,17 L60,17 L60,13 L75,13 L75,8 Z" />
+
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M80,8 L80,32 L85,32 L85,8 Z" />
+
+    <!-- Buddie -->
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M100,8 L100,32 L110,32 C115,32 120,28 120,20 C120,12 115,8 110,8 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M105,13 L105,27 L110,27 C112.5,27 115,24 115,20 C115,16 112.5,13 110,13 Z" />
+
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M125,8 L125,32 L145,32 L145,27 L130,27 L130,8 Z" />
+
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M150,8 L150,32 L170,32 L170,27 L155,27 L155,22 L165,22 L165,17 L155,17 L155,13 L170,13 L170,8 Z" />
+
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M175,8 L175,32 L180,32 L180,8 Z" />
+
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M185,8 L185,32 L205,32 L205,27 L190,27 L190,22 L200,22 L200,17 L190,17 L190,13 L205,13 L205,8 Z" />
+</vector>

@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1013031781074",
+    "project_id": "bank-buddie",
+    "storage_bucket": "bank-buddie.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013031781074:android:88428b7761b5737e7b630b",
+        "android_client_info": {
+          "package_name": "com.vcsma.bank_buddie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013031781074-lgapt2ljp0d8bubbitk4m99f9o1oqkqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOEG6cahnqlx1_pWbpcGx__U22aUqlkp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013031781074-lgapt2ljp0d8bubbitk4m99f9o1oqkqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013031781074:android:d9830c10dd77adb87b630b",
+        "android_client_info": {
+          "package_name": "vcmsa.projects.bankbuddie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013031781074-lgapt2ljp0d8bubbitk4m99f9o1oqkqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOEG6cahnqlx1_pWbpcGx__U22aUqlkp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013031781074-lgapt2ljp0d8bubbitk4m99f9o1oqkqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

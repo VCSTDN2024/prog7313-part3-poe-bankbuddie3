@@ -1,0 +1,81 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Circle background -->
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M100,100 m-80,0 a80,80 0 1,0 160,0 a80,80 0 1,0 -160,0" />
+
+    <!-- Left hand -->
+    <path
+        android:fillColor="#F5D0A9"
+        android:pathData="M50,120 C50,110 60,105 70,105 C80,105 85,110 90,115 L90,130 C85,135 75,140 65,140 C55,140 50,130 50,120 Z" />
+
+    <!-- Left thumb -->
+    <path
+        android:fillColor="#F5D0A9"
+        android:pathData="M70,105 C70,100 75,95 80,95 C85,95 90,100 90,105 C90,110 85,115 80,115 C75,115 70,110 70,105 Z" />
+
+    <!-- Left sleeve -->
+    <path
+        android:fillColor="#A9D0F5"
+        android:pathData="M50,120 L40,120 L40,140 L60,150 L65,140 Z" />
+
+    <!-- Right hand -->
+    <path
+        android:fillColor="#F5D0A9"
+        android:pathData="M150,120 C150,110 140,105 130,105 C120,105 115,110 110,115 L110,130 C115,135 125,140 135,140 C145,140 150,130 150,120 Z" />
+
+    <!-- Right thumb -->
+    <path
+        android:fillColor="#F5D0A9"
+        android:pathData="M130,105 C130,100 125,95 120,95 C115,95 110,100 110,105 C110,110 115,115 120,115 C125,115 130,110 130,105 Z" />
+
+    <!-- Right sleeve -->
+    <path
+        android:fillColor="#A9D0F5"
+        android:pathData="M150,120 L160,120 L160,140 L140,150 L135,140 Z" />
+
+    <!-- Gold coin 1 -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M100,100 m-25,0 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0" />
+
+    <!-- Gold coin 1 inner -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M100,100 m-20,0 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0" />
+
+    <!-- Gold coin 1 highlight -->
+    <path
+        android:fillColor="#FFECB3"
+        android:pathData="M90,90 L110,90 L110,95 L90,95 Z" />
+
+    <!-- Gold coin 2 (partially visible) -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M85,115 m-15,0 a15,15 0 1,0 30,0 a15,15 0 1,0 -30,0" />
+
+    <!-- Gold coin 2 inner -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M85,115 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0" />
+
+    <!-- Gold coin 3 (partially visible) -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M115,115 m-15,0 a15,15 0 1,0 30,0 a15,15 0 1,0 -30,0" />
+
+    <!-- Gold coin 3 inner -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M115,115 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0" />
+
+    <!-- Dollar sign on main coin -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,85 L100,115 M95,90 L105,90 M95,110 L105,110" />
+</vector>

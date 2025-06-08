@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Wallet body -->
+    <path
+        android:fillColor="#2D7A8B"
+        android:pathData="M50,60 L150,60 L150,140 L50,140 Z" />
+
+    <!-- Wallet flap -->
+    <path
+        android:fillColor="#1D5A6B"
+        android:pathData="M50,60 L150,60 L150,80 L50,80 Z" />
+
+    <!-- Eyes -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M80,90 A10,10 0 1,1 100,90 A10,10 0 1,1 80,90 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M110,90 A10,10 0 1,1 130,90 A10,10 0 1,1 110,90 Z" />
+
+    <!-- Pupils -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M85,90 A5,5 0 1,1 95,90 A5,5 0 1,1 85,90 Z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M115,90 A5,5 0 1,1 125,90 A5,5 0 1,1 115,90 Z" />
+
+    <!-- Mouth (stroke only) -->
+    <path
+        android:pathData="M90,115 Q105,125 120,115"
+        android:strokeColor="#000000"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent" />
+
+    <!-- Arms -->
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M50,100 L30,80 L25,85 L45,105 Z" />
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M150,100 L170,80 L175,85 L155,105 Z" />
+
+    <!-- Legs -->
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M70,140 L65,170 L75,170 L80,140 Z" />
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M120,140 L115,170 L125,170 L130,140 Z" />
+
+</vector>
