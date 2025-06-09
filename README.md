@@ -117,3 +117,8 @@ All data is persistently stored in Firebase Firestore, ensuring it's available a
 - Review category spending periodically to identify areas for budget optimization
 - Take photos of receipts for important purchases to maintain accurate records
 - Set realistic budget goals based on your income and necessary expenses
+
+## Video Demonstration
+
+A link to the demonstration can be found here: https://youtu.be/M4AHV43Fh3c 
+
