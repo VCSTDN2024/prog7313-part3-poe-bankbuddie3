@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context=".BudgetGoalActivity">
+
+    <!-- Enhanced Header Bar with Gradient -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_gradient_background"
+        android:elevation="8dp"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/circular_ripple_background"
+            android:padding="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/budget_goals_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/settingsButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_settings_white"
+            android:contentDescription="@string/settings"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/circular_ripple_background"
+            android:padding="4dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Enhanced Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Enhanced Filter Section -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filterCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:id="@+id/filterIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_filter"
+                        android:contentDescription="@string/filter"
+                        app:tint="@color/teal_700"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/filterLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/filter_by"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintStart_toEndOf="@id/filterIcon"
+                        app:layout_constraintTop_toTopOf="@id/filterIcon"
+                        app:layout_constraintBottom_toBottomOf="@id/filterIcon"/>
+
+                    <TextView
+                        android:id="@+id/categoryLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="14sp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/filterLabel"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <Spinner
+                        android:id="@+id/categorySpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/enhanced_spinner_background"
+                        android:padding="12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/timeframeSpinner"
+                        app:layout_constraintTop_toBottomOf="@id/categoryLabel"/>
+
+                    <TextView
+                        android:id="@+id/timeframeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timeframe"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toTopOf="@id/categoryLabel"
+                        app:layout_constraintStart_toStartOf="@id/timeframeSpinner"/>
+
+                    <Spinner
+                        android:id="@+id/timeframeSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/enhanced_spinner_background"
+                        android:padding="12dp"
+                        app:layout_constraintStart_toEndOf="@id/categorySpinner"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/timeframeLabel"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Enhanced Performance Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/performanceCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintTop_toBottomOf="@id/filterCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp">
+
+                    <!-- Performance Header -->
+                    <LinearLayout
+                        android:id="@+id/performanceHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_analytics"
+                            app:tint="@color/teal_700"/>
+
+                        <TextView
+                            android:id="@+id/performanceTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp"
+                            android:text="@string/budget_performance"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/roboto_medium"/>
+
+                        <ImageView
+                            android:id="@+id/refreshButton"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_refresh"
+                            android:background="@drawable/circular_ripple_background"
+                            android:padding="4dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:tint="@color/teal_700"/>
+                    </LinearLayout>
+
+                    <!-- Stats Grid -->
+                    <LinearLayout
+                        android:id="@+id/statsGrid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/performanceHeader">
+
+                        <TextView
+                            android:id="@+id/currentGoalText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/current_goal_placeholder"
+                            android:textColor="@color/teal_700"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/roboto_medium"
+                            android:background="@drawable/stat_item_background"
+                            android:padding="16dp"
+                            android:layout_marginBottom="12dp"
+                            android:drawableStart="@drawable/ic_target"
+                            android:drawablePadding="12dp"
+                            android:gravity="center_vertical"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="12dp">
+
+                            <TextView
+                                android:id="@+id/currentSpendingText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/current_spending_placeholder"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:background="@drawable/stat_item_background"
+                                android:padding="16dp"
+                                android:layout_marginEnd="6dp"
+                                android:drawableStart="@drawable/ic_expense"
+                                android:drawablePadding="8dp"
+                                android:gravity="center_vertical"/>
+
+                            <TextView
+                                android:id="@+id/incomeStatusText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/current_income_placeholder"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:background="@drawable/stat_item_background"
+                                android:padding="16dp"
+                                android:layout_marginStart="6dp"
+                                android:drawableStart="@drawable/ic_income"
+                                android:drawablePadding="8dp"
+                                android:gravity="center_vertical"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/statusText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/status_placeholder"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/roboto_medium"
+                            android:background="@drawable/status_background"
+                            android:padding="16dp"
+                            android:drawableStart="@drawable/ic_status"
+                            android:drawablePadding="12dp"
+                            android:gravity="center_vertical"/>
+                    </LinearLayout>
+
+                    <!-- Enhanced Progress Visualization -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/progressSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/progress_section_background"
+                        android:padding="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/statsGrid">
+
+                        <TextView
+                            android:id="@+id/progressTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/progress_visualization"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/roboto_medium"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <!-- Enhanced Progress Container -->
+                        <FrameLayout
+                            android:id="@+id/progressBarContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/progress_container_background"
+                            app:layout_constraintTop_toBottomOf="@id/progressTitle">
+
+                            <View
+                                android:id="@+id/minGoalLine"
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:background="@drawable/min_goal_line_background"
+                                android:elevation="2dp"/>
+
+                            <View
+                                android:id="@+id/maxGoalLine"
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:background="@drawable/max_goal_line_background"
+                                android:elevation="2dp"/>
+
+                            <ProgressBar
+                                android:id="@+id/budgetProgressBar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="8dp"
+                                android:progressDrawable="@drawable/enhanced_budget_progress_drawable"
+                                android:max="100"
+                                android:progress="0"/>
+                        </FrameLayout>
+
+                        <!-- Enhanced Legend -->
+                        <LinearLayout
+                            android:id="@+id/legendLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            app:layout_constraintTop_toBottomOf="@id/progressBarContainer">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/legend_item_background"
+                                android:padding="8dp"
+                                android:layout_marginEnd="12dp">
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/min_goal_indicator"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="6dp"
+                                    android:text="@string/min_goal"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/gray_dark"
+                                    android:fontFamily="@font/roboto_regular"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/legend_item_background"
+                                android:padding="8dp"
+                                android:layout_marginEnd="12dp">
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/current_indicator"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="6dp"
+                                    android:text="@string/current"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/gray_dark"
+                                    android:fontFamily="@font/roboto_regular"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/legend_item_background"
+                                android:padding="8dp">
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/max_goal_indicator"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="6dp"
+                                    android:text="@string/max_goal"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/gray_dark"
+                                    android:fontFamily="@font/roboto_regular"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Enhanced Chart -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/chartCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="@color/chart_background"
+                        app:layout_constraintTop_toBottomOf="@id/progressSection">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:id="@+id/chartTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/spending_timeline"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/roboto_medium"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"/>
+
+                            <com.github.mikephil.charting.charts.LineChart
+                                android:id="@+id/monthlySpendingChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="220dp"
+                                android:layout_marginTop="16dp"
+                                app:layout_constraintTop_toBottomOf="@id/chartTitle"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Enhanced Budget Goals Form -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/formCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintTop_toBottomOf="@id/performanceCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp">
+
+                    <!-- Form Header -->
+                    <LinearLayout
+                        android:id="@+id/formHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_goal_setting"
+                            app:tint="@color/teal_700"/>
+
+                        <TextView
+                            android:id="@+id/setBudgetTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp"
+                            android:text="@string/set_budget_goals"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/roboto_medium"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/descriptionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/budget_goals_description"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:lineSpacingExtra="2dp"
+                        app:layout_constraintTop_toBottomOf="@id/formHeader"/>
+
+                    <!-- Enhanced Input Fields -->
+                    <LinearLayout
+                        android:id="@+id/inputFieldsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/descriptionText">
+
+                        <!-- Minimum Goal Input -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/minGoalInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxCornerRadiusTopStart="12dp"
+                            app:boxCornerRadiusTopEnd="12dp"
+                            app:boxCornerRadiusBottomStart="12dp"
+                            app:boxCornerRadiusBottomEnd="12dp"
+                            app:boxStrokeColor="@color/teal_700"
+                            app:hintTextColor="@color/teal_700"
+                            android:hint="@string/minimum_goal_hint"
+                            app:startIconDrawable="@drawable/ic_min_goal"
+                            app:startIconTint="@color/teal_700"
+                            app:prefixText="R "
+                            app:prefixTextColor="@color/teal_700">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/minGoalInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/roboto_regular"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Maximum Goal Input -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/maxGoalInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxCornerRadiusTopStart="12dp"
+                            app:boxCornerRadiusTopEnd="12dp"
+                            app:boxCornerRadiusBottomStart="12dp"
+                            app:boxCornerRadiusBottomEnd="12dp"
+                            app:boxStrokeColor="@color/teal_700"
+                            app:hintTextColor="@color/teal_700"
+                            android:hint="@string/maximum_goal_hint"
+                            app:startIconDrawable="@drawable/ic_max_goal"
+                            app:startIconTint="@color/teal_700"
+                            app:prefixText="R "
+                            app:prefixTextColor="@color/teal_700">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/maxGoalInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/roboto_regular"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Income Goal Input -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/incomeGoalInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="24dp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxCornerRadiusTopStart="12dp"
+                            app:boxCornerRadiusTopEnd="12dp"
+                            app:boxCornerRadiusBottomStart="12dp"
+                            app:boxCornerRadiusBottomEnd="12dp"
+                            app:boxStrokeColor="@color/income_green"
+                            app:hintTextColor="@color/income_green"
+                            android:hint="@string/income_goal_hint"
+                            app:startIconDrawable="@drawable/ic_income_goal"
+                            app:startIconTint="@color/income_green"
+                            app:prefixText="R "
+                            app:prefixTextColor="@color/income_green">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/incomeGoalInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/roboto_regular"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <!-- Enhanced Action Buttons -->
+                    <LinearLayout
+                        android:id="@+id/buttonLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/inputFieldsLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/saveButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginBottom="12dp"
+                            android:text="@string/save_budget_goal"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/roboto_medium"
+                            app:backgroundTint="@color/teal_700"
+                            app:cornerRadius="16dp"
+                            app:elevation="4dp"
+                            app:icon="@drawable/ic_save"
+                            app:iconGravity="textStart"
+                            app:iconPadding="8dp"
+                            app:iconTint="@color/white"
+                            style="@style/Widget.MaterialComponents.Button"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/visualizeButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:text="@string/visualize_budget_data"
+                            android:textColor="@color/teal_700"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/roboto_medium"
+                            app:backgroundTint="@color/transparent"
+                            app:strokeColor="@color/teal_700"
+                            app:strokeWidth="2dp"
+                            app:cornerRadius="16dp"
+                            app:icon="@drawable/ic_analytics"
+                            app:iconGravity="textStart"
+                            app:iconPadding="8dp"
+                            app:iconTint="@color/teal_700"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Enhanced Loading Overlay -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/loading_overlay"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:indeterminateTint="@color/teal_700"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/loading_budget_data"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_expense_categories"
+        android:title="Add Categories" />
+
+    <item
+
+        android:id="@+id/menu_add_income"
+        android:title="Add Income" />
+
+    <item
+        android:id="@+id/add_transaction_menu"
+        android:title="View Transactions" />
+
+    <item
+        android:id="@+id/menu_budget_visualization"
+        android:title="Budget Visualization" />
+
+    <item
+        android:id="@+id/menu_add_expense"
+        android:title="Add Expense" />
+
+    <item
+        android:id="@+id/menu_chart_visualization"
+        android:title="Chart visualization" />
+
+    <item
+        android:id="@+id/menu_view_expenses"
+        android:title="View Expenses" />
+
+    <item
+        android:id="@+id/menu_expense_summary"
+        android:title="Expense Summary" />
+
+    <item
+        android:id="@+id/menu_budget_goals"
+        android:title="Budget Goals" />
+
+    <item
+        android:id="@+id/menu_settings"
+        android:title="Settings" />
+
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Logout" />
+
+
+</menu>

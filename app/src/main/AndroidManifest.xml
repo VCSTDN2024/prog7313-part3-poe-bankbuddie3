@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.vcsma.bank_buddie">
+
+    <!-- Allow network access for image downloading -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permission for accessing gallery for photos -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="Bank_Buddie"
+        android:roundIcon="@drawable/new_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bank_Buddie"
+        tools:targetApi="31">
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <!-- Launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Onboarding & Authentication Flow -->
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CreateAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResetSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PasswordChangedActivity"
+            android:exported="false" />
+
+        <!-- Main Dashboard -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true" />
+
+        <!-- Expense Details -->
+        <activity
+            android:name=".ExpenseDetailActivity"
+            android:exported="false" />
+
+        <!-- Expense Entry -->
+        <activity
+            android:name=".ExpenseEntryActivity"
+            android:exported="false" />
+
+        <!-- Income Entry -->
+        <activity
+            android:name=".AddIncomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AIChatbotActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AccountBalanceActivity"
+            android:exported="false" />
+
+        <!-- Search -->
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+
+        <!-- Categories -->
+        <activity
+            android:name=".CategoriesActivity"
+            android:exported="false" />
+
+        <!-- Category Detail -->
+        <activity
+            android:name=".CategoryDetailActivity"
+            android:exported="false" />
+
+        <!-- Expense Categories -->
+        <activity
+            android:name=".ExpenseCategoryActivity"
+            android:exported="false" />
+
+        <!-- Expense List -->
+        <activity
+            android:name=".ExpenseListActivity"
+            android:exported="false" />
+
+        <!-- Expense Summary -->
+        <activity
+            android:name=".ExpenseSummaryActivity"
+            android:exported="false" />
+
+        <!-- Budget Goal -->
+        <activity
+            android:name=".BudgetGoalActivity"
+            android:exported="false" />
+
+        <!-- Notification -->
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="true" />
+
+        <!-- Transaction Detail -->
+        <activity
+            android:name=".TransactionDetailActivity"
+            android:exported="false" />
+
+        <!-- Transaction List -->
+        <activity
+            android:name=".TransactionListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddExpenseActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+        <!-- Calendar -->
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".FinancialHealthActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".CategorySpendingChartActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".BudgetVisualizationActivity"
+            android:exported="false" />
+
+    </application>
+</manifest>

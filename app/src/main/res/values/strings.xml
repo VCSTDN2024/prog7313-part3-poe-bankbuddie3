@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bank Buddie</string>
+    <string name="app_name_caps">BANKBUDDIE</string>
+    <string name="app_subtitle">YOUR FINANCIAL FRIEND</string>
+    <string name="app_mascot">Bank Buddie Mascot</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="get_started">Get Started</string>
+    <string name="onboarding_image">Onboarding Image</string>
+    <string name="welcome">Welcome</string>
+    <string name="username_or_email">Username or Email</string>
+    <string name="password">Password</string>
+    <string name="or_sign_up_with">or sign up with</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_with_apple">Sign in with Apple</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="terms_agreement">By continuing, you agree to\nTerms of Use and Privacy Policy.</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="reset_password_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="email_hint">example@example.com</string>
+    <string name="next_step">Next Step</string>
+    <string name="success">Success</string>
+    <string name="password_reset_success_title">Password Has Been Changed Successfully</string>
+    <string name="password_reset_success_message">You can now use your new password to log in to your account.</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="hint_email">Enter your email</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="password_hint">Enter new password</string>
+    <string name="confirm_password_hint">Confirm new password</string>
+    <string name="change_password">Change Password</string>
+    <string name="password_changed_success_title">Password Has Been Changed Successfully</string>
+    <string name="password_changed_success_message">You can now use your new password to log in to your account.</string>
+
+    <!-- Add these new strings to your existing strings.xml file -->
+
+    <string name="switch_to_income">Switch to Income</string>
+    <string name="switch_to_expense">Switch to Expense</string>
+    <string name="save_expense">Save Expense</string>
+    <string name="save_income">Save Income</string>
+    <string name="recurring_transaction">Recurring Transaction</string>
+    <string name="frequency">Frequency</string>
+
+    <string name="yearly">Yearly</string>
+    <string name="end_date">End Date</string>
+    <string name="description">Description</string>
+    <string name="enter_description">Enter description</string>
+    <string name="amount">Amount</string>
+
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+
+    <string name="photo_optional">Photo (Optional)</string>
+    <string name="add_photo">Add Photo</string>
+
+    <string name="budget_info">This transaction will count towards your budget goal.</string>
+
+
+    <string name="no_notifications">You don\'t have any notifications yet.</string>
+    <string name="timeout_error">Loading timed out. Please check your connection and try again.</string>
+    <!-- Dashboard Strings -->
+    <string name="welcome_user">%1$s, %2$s!</string>
+    <string name="welcome_placeholder">Good Morning, User!</string>
+    <string name="total_balance">Total Balance</string>
+    <string name="balance_placeholder">$5,000.00</string>
+    <string name="total_expenses">Total Expenses</string>
+    <string name="expenses_placeholder">-$500.00</string>
+    <string name="expenses_percent">%d%% Of Your Expenses, Looks Good.</string>
+    <string name="expenses_percent_placeholder">30% Of Your Expenses, Looks Good.</string>
+    <string name="savings_on_track">Your Savings Are On Track</string>
+    <string name="financial_goal_week">Financial Goal For The Week</string>
+    <string name="expenses_week">Your Weekly Expenses</string>
+    <string name="goal_placeholder">$3,000.00</string>
+    <string name="date_placeholder">15 May</string>
+    <string name="income_placeholder">+$4,000.00</string>
+    <string name="expense_placeholder">-$100.00</string>
+    <string name="currency_value">$%.2f</string>
+    <string name="currency_value_negative">-$%.2f</string>
+    <string name="transaction_date">%1$s %2$s</string>
+
+
+    <!-- Budget Goal Activity String Resources -->
+    <string name="current_spending_format">Current Spending%1$s: %2$s</string>
+    <string name="current_income_format">Current Income: %1$s</string>
+    <string name="goal_display_format">Current %1$s Goal%2$s: Min R%3$d - Max R%4$d</string>
+    <string name="goal_not_set_format">No %1$s Goal Set%2$s</string>
+    <string name="please_log_in_first">Please log in first</string>
+    <string name="enter_min_max_goals">Please enter minimum or maximum goals</string>
+    <string name="min_goal_greater_than_max">Minimum goal cannot be greater than maximum goal</string>
+    <string name="budget_goal_saved_success">Budget goal saved successfully</string>
+    <string name="status_no_goals">Status: No budget goals set</string>
+
+    <string name="status_under_minimum">Status: Under minimum goal by R%1$d</string>
+    <string name="status_within_budget">Status: Within budget by R%1$d</string>
+    <string name="status_exceeded_budget">Status: Exceeded budget by R%1$d</string>
+    <string name="back">Back</string>
+    <!-- Additional Budget Goal Strings -->
+    <string name="status_above_minimum">Above minimum goal by R%1$d</string>
+
+    <!-- Layout Strings -->
+    <string name="budget_goals_title">Budget Goals</string>
+    <string name="filter_by">Filter by</string>
+
+    <string name="timeframe">Timeframe</string>
+    <string name="budget_performance">Budget Performance</string>
+    <string name="progress_visualization">Progress Visualization</string>
+    <string name="spending_timeline">Spending Timeline</string>
+    <string name="set_budget_goals">Set Budget Goals</string>
+    <string name="budget_goals_description">Set your spending goals to help track and manage your expenses effectively.</string>
+    <string name="minimum_goal_hint">Minimum spending goal</string>
+    <string name="maximum_goal_hint">Maximum spending goal</string>
+    <string name="income_goal_hint">Income target</string>
+    <string name="save_budget_goal">Save Budget Goal</string>
+    <string name="visualize_budget_data">Visualize Budget Data</string>
+    <string name="loading_budget_data">Loading budget data...</string>
+
+    <string name="filter">Filter</string>
+    <string name="min_goal">Min Goal</string>
+    <string name="current">Current</string>
+    <string name="max_goal">Max Goal</string>
+
+    <!-- Placeholder strings -->
+    <string name="current_goal_placeholder">Current Monthly Goal: Min R0 - Max R0</string>
+    <string name="current_spending_placeholder">Current Spending: R0</string>
+    <string name="current_income_placeholder">Current Income: R0</string>
+    <string name="status_placeholder">Status: No data available</string>
+    <!-- Budget Visualization Activity Strings -->
+    <string name="no_category_data_available">No category data available</string>
+    <string name="expense_distribution">Expense\nDistribution</string>
+    <string name="no_distribution_data_available">No distribution data available</string>
+    <string name="error_loading_categories">Error Loading Categories</string>
+    <string name="failed_to_load_categories">Failed to load categories: %1$s</string>
+    <string name="data_loading_timeout">Data Loading Timeout</string>
+    <string name="loading_data_timeout_message">Loading data is taking longer than expected. Would you like to retry?</string>
+    <string name="within_budget_format">Within budget (%1$s remaining)</string>
+
+    <string name="failed_to_load_budget_goal">Failed to load budget goal: %1$s</string>
+    <string name="error_loading_data">Error Loading Data</string>
+    <string name="failed_to_load_expense_data">Failed to load expense data: %1$s</string>
+    <string name="budget_visualization_title">%1$s Budget Visualization%2$s</string>
+    <string name="date_range_format">%1$s to %2$s</string>
+    <string name="other">Other</string>
+
+    <string name="expenses_by_category">Expenses by Category</string>
+    <string name="week_format">Week %1$d</string>
+
+        <!-- Budget Goal Activity Strings -->
+        <string name="min_goal_error">Min goal cannot be greater than max goal</string>
+
+
+        <string name="loading_timeout_message">Loading budget goals is taking longer than expected. Would you like to retry?</string>
+
+
+        <string name="error_loading_budget_goal">Error Loading Budget Goal</string>
+        <string name="error_loading_budget_goal_message">Failed to load budget goal: %1$s\n\nWould you like to retry?</string>
+        <string name="error_loading_income_data">Error loading income data: %1$s</string>
+        <string name="error_loading_spending_data">Error loading spending data: %1$s</string>
+        <string name="current_spending_error">Current Spending: Error loading data</string>
+        <string name="status_error">Status: Error loading data</string>
+
+        <string name="income_goal_format"> of R%1$d goal</string>
+
+        <string name="error_saving_budget_goal">Error Saving Budget Goal</string>
+        <string name="error_saving_budget_goal_message">Failed to save budget goal: %1$s</string>
+
+        <string name="enter_valid_numbers">Please enter valid numbers</string>
+
+
+    <!-- Time filters -->
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+
+    <string name="spending_format">Spending: %s</string>
+    <string name="income_format">Income: %s</string>
+    <string name="income_with_goal_format">Income: %s of %s goal</string>
+    <string name="under_minimum_goal">Under minimum goal by %s</string>
+
+    <string name="exceeded_budget">Exceeded budget by %s</string>
+    <string name="no_budget_goal_set">No budget goal set</string>
+
+    <!-- Transaction categories -->
+    <string name="salary">Salary</string>
+    <string name="groceries">Groceries</string>
+    <string name="pantry">Pantry</string>
+    <string name="rent">Rent</string>
+    <string name="savings">Savings</string>
+
+    <!-- Bottom navigation -->
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="add">Add</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="chatbot">ChatBot</string>
+
+    <!-- Authentication -->
+    <string name="logout">Logout</string>
+    <string name="logout_success">Successfully logged out</string>
+
+    <!-- Format strings -->
+    <string name="balance_format">R%.2f</string>
+    <string name="expense_format">-R%.2f</string>
+    <string name="expense_percent_format">%d%% of your expenses, looks good.</string>
+
+    <!-- Expense Details -->
+
+    <string name="expense_details">Expense Details</string>
+    <string name="expense_description">Expense Description</string>
+    <string name="category">Category</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="photo">Photo</string>
+    <string name="expense_photo">Expense Photo</string>
+
+
+    <!-- Currency formats -->
+    <string name="currency_format">R%.2f</string>
+    <string name="currency_negative_format">-R%.2f</string>
+    <string name="currency_zero">R0.00</string>
+
+    <!-- Extra Features -->
+    <string name="analytics">Analytics</string>
+    <string name="transfer">Transfer</string>
+    <string name="layers">Layers</string>
+
+    <!-- Greeting strings -->
+    <string name="greeting_morning">Good Morning</string>
+    <string name="greeting_afternoon">Good Afternoon</string>
+    <string name="greeting_evening">Good Evening</string>
+
+    <!-- Goal format strings -->
+    <string name="daily_goal_format">Daily Goal: R%.2f</string>
+    <string name="weekly_goal_format">Weekly Goal: R%.2f</string>
+    <string name="monthly_goal_format">Monthly Goal: R%.2f</string>
+    <string name="monthly_goal_format_alt">Monthly Budget: R%.2f</string>
+
+    <!-- Currency format strings -->
+
+    <string name="currency_format_positive">+R%.2f</string>
+    <string name="currency_format_negative">-R%.2f</string>
+
+    <item name="spinnerProgressBar" type="id" />
+
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+    <string name="currency_value_positive">+R%.2f</string>
+    <string name="expense_summary">Expense Summary</string>
+    <string name="category_breakdown">Category Breakdown</string>
+    <string name="budget_goal_progress">Budget Goal Progress</string>
+
+
+    <!-- Time Periods -->
+    <string name="time_period">Time Period</string>
+    <!-- Transactions -->
+    <string name="recent_transactions">Recent Transactions</string>
+
+    <!-- Sync Status -->
+    <string name="sync_status">Last synced: %1$s</string>
+    <string name="sync_status_now">Last synced: Just now</string>
+    <string name="sync_status_minute">Last synced: 1 minute ago</string>
+    <string name="sync_status_minutes">Last synced: %1$d minutes ago</string>
+    <string name="sync_status_time">Last synced: %1$s</string>
+
+    <string name="no_expenses_found">No expenses found for this period.</string>
+   >
+    <string name="transactions">Transactions</string>
+    <string name="spending_trend">Spending Trend</string>
+    <string name="total_spent">Total Spent:</string>
+    <string name="under_budget">Under Budget</string>
+    <string name="within_budget">Within Budget</string>
+    <string name="over_budget">Over Budget</string>
+    -->
+    <string name="loading_timeout">Operation is taking longer than expected. Would you like to retry?</string>
+    <string name="loading_success">Loaded successfully!</string>
+    <string name="operation_failed">Operation failed: %s</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="error">Error</string>
+
+    <!-- Other strings -->
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="welcome_message">Welcome to Bank Buddie, your financial companion</string>
+    <string name="account_balance">Account Balance</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="add_income">Add Income</string>
+    <string name="categories">Categories</string>
+    <string name="budget_goals">Budget Goals</string>
+
+    <string name="ai_assistant">AI Assistant</string>
+    <string name="ask_ai_placeholder">Ask me anything about your finances…</string>
+    <string name="send">Send</string>
+    <string name="ai_thinking">Thinking…</string>
+    <string name="ai_assistant_title">AI Financial Assistant</string>
+
+
+    <!-- Settings Activity Strings -->
+    <string name="settings">Settings</string>
+    <string name="profile_information">Profile Information</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="change_photo">Change Photo</string>
+    <string name="username">Username</string>
+
+    <string name="current_password">Current Password</string>
+
+
+    <string name="preferences">Preferences</string>
+
+    <string name="dark_mode">Dark Mode</string>
+    <string name="biometric_authentication">Biometric Authentication</string>
+    <string name="save_changes">Save Changes</string>
+
+    <string name="dashboard_title">Dashboard</string>
+    <string name="balance_title">Account Balance</string>
+    <string name="expenses_title">Expenses</string>
+    <string name="income_title">Income</string>
+    <string name="categories_title">Categories</string>
+    <string name="budget_title">Budget Goals</string>
+    <string name="search_title">Search</string>
+
+    <string name="amount_hint">Amount</string>
+    <string name="description_hint">Description</string>
+    <string name="category_hint">Category</string>
+    <string name="date_hint">Date</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="search_hint">Search transactions…</string>
+    <string name="no_results">No results found</string>
+    <string name="loading">Loading…</string>
+    <string name="error_message">Something went wrong. Please try again.</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="delete_button">Delete</string>
+    <string name="edit_button">Edit</string>
+    <string name="send_button">Send</string>
+    <string name="message_hint">Type a message…</string>
+    <string name="enter_current_password" />
+    <string name="new_email" />
+    <string name="enter_new_email" />
+
+</resources>
