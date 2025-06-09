@@ -22,7 +22,7 @@ Bank Buddie is a comprehensive mobile financial management application built wit
 
 ### Budget Management
 - **Budget Goals**: Set minimum and maximum monthly budget goals
-- **Goal Tracking**: Visual indicators for progress toward spending goals(coming soon)
+- **Goal Tracking**: Visual indicators for progress toward spending goals
 - **Dynamic Analysis**: Real-time calculation of spending relative to goals
 
 ### Reporting & Analysis
@@ -34,6 +34,18 @@ Bank Buddie is a comprehensive mobile financial management application built wit
 - **Dynamic Search**: Real-time search across all transactions
 - **Multi-criteria Filtering**: Filter by date, category, amount, and type
 - **Date-based Searches**: Find transactions within specific time periods
+
+### AI Assistant
+- **Instant banking answers**: Ask the AI Chatbot any questions and recive instant answers 
+- **Personalized financial advice**: AI Assistant gives financial advice based on spending habits
+- **Explains complex financial terms**: Not sure what a fancy finance term means? AI Assistant will explain!
+- **Real-time banking support**: Need other assistance? Ask AI Assistant
+
+### Notifications
+- **Real-time transaction alerts**: Get updates whenever a new transaction comes through 
+- **Account activity updates**: Notifies you of any changes made to your account 
+- **Financial goal progress**: Visually displays how you are working towards your financial goal
+- **Personalized tips**: Get notified about tips and tricks to help you manage your finances! 
 
 ## Firebase Integration
 
@@ -120,5 +132,5 @@ All data is persistently stored in Firebase Firestore, ensuring it's available a
 
 ## Video Demonstration
 
-A link to the demonstration can be found here: https://youtu.be/M4AHV43Fh3c 
+A link to the demonstration can be found here: https://youtu.be/t3faDO0ZaVw 
 
